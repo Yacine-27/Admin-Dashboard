@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Inter", serif;
+  color: var(--main-font-color);
+}
+
+:root {
+  --main-background: #33312e;
+  --nav-background: #1d1b17;
+  --header-background: #3c3d37;
+  --main-font-color: #e3e3e3;
+}
+
+body {
+  display: grid;
+  grid-template: minmax(5rem, 15rem) minmax(35rem, 7fr) / minmax(20rem, 1fr) minmax(
+      30rem,
+      5fr
+    );
+  background-color: var(--main-background);
+}
+
+header {
+  grid-area: 1 / 2 / 2 / -1;
+  background-color: var(--header-background);
+}
+
+aside {
+  grid-area: 1 / 1 / -1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  background-color: var(--nav-background);
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h2 {
+  display: inline;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+svg {
+  fill: #fff;
+  max-height: 50px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.setting {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.setting p {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.setting svg {
+  height: 35px;
+}
+
+header {
+  display: grid;
+  grid-template: minmax(35px, 1fr) minmax(50px, 2fr) / minmax(30px, 2fr) minmax(
+      15px,
+      1fr
+    );
+}
+
+.site-nav {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.intro {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.site-buttons {
+  grid-area: 2 / 2 / -1 / -1;
+}
+
+.search-bar > svg {
+  max-height: 35px;
+}
+
+.search-bar > input {
+  height: 20px;
+  flex: auto;
+  background-color: #979797;
+  border: none;
+  border-radius: 1rem;
+  min-height: 30px;
+  padding: 0 10px;
+}
+
+.search-bar > input:focus {
+  border: none;
+  outline: none;
+  background-color: var(--nav-background);
+}
+
+.search-bar {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.site-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-nav > svg {
+  fill: #fff;
+  max-height: 30px;
+  flex: 1;
+}
+
+.site-nav .name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  flex: 1;
+  margin: auto 0;
+}
+
+.site-nav-buttons {
+  flex: 1;
+  flex-direction: row;
+}
+
+.site-nav-buttons > svg {
+  max-height: 30px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.user-name > h2 {
+  font-size: 2.5rem;
+}
+
+.site-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.site-buttons > button {
+  max-height: 50%;
+  max-width: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  flex: 1;
+  background-color: var(--nav-background);
+  border: none;
+  font-weight: 600;
+  font-size: larger;
+  cursor: pointer;
+}
+
+main {
+  grid-area: 2 / 2 / -1 / -1;
+  display: grid;
+  grid-template:
+    repeat(2, minmax(150px, 1fr))
+    / minmax(300px, 3fr) minmax(200px, 1fr);
+}
+
+.projects-container > h3 {
+  margin: 15px 0 0 10px;
+  font-size: 15px;
+}
+
+.projects {
+  display: grid;
+  grid-area: 1 / 1 / 3 / 2;
+  grid-auto-rows: minmax(150px, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.projects > article {
+  background-color: var(--nav-background);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 10px 15px;
+  gap: 7px;
+}
+
+.emojis {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.emojis > svg {
+  height: 20px;
+}
+
+article h4 {
+  font-size: 1.4rem;
+}
+
+.announcements-container {
+  grid-area: 1 / 2 / 2 / -1;
+  margin-left: 10px;
+}
+
+.announcements {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 15px;
+  background-color: var(--nav-background);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.announcements > h4 {
+  font-size: 1rem;
+  margin: 15px;
+}
+
+.announcement {
+  padding: 20px;
+  border-bottom: 0.05rem solid #ddd;
+  flex: 1;
+}
+
+.announcement:last-child {
+  border-bottom: none;
+}
+
+.announcement > h4 {
+  font-size: 1.3rem;
+}
+
+.trending {
+  grid-area: 2 / 2 / -1 / -1;
+  background-color: var(--nav-background);
+  border-radius: 15px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.trend-info-username {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.trend-info-description {
+}
