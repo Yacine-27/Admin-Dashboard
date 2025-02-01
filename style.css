@@ -67,6 +67,7 @@ svg {
   flex-flow: row nowrap;
   gap: 2rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .setting p {
